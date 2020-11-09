@@ -41,6 +41,10 @@ let knapp5 = btn[2];
 knapp5.addEventListener('click',createUl)
 
 
+let knapp6 = btn11[1];
+knapp6.addEventListener('click', changeKnapp6color);
+
+
 function resetAll() {
     art1.style.backgroundColor = 'white';
 
@@ -69,7 +73,13 @@ function resetAll() {
 function changeBtninArt1() {
     let art1Btn = document.querySelector('.art-1 button');
     art1Btn.innerText = 'bought';
-    art1Btn.style.backgroundColor = 'orange';
+    
+}
+
+
+function changeKnapp6color (){
+    let artBtn = document.querySelector ('.art-1 button')
+    artBtn.style.backgroundColor='orange';
 }
 
 // ändrar art-1 backgrundsfärg till hot pink
