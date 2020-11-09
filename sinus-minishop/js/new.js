@@ -41,6 +41,8 @@ let knapp5 = btn[2];
 knapp5.addEventListener('click',createUl)
 
 
+let btn11 = document.querySelectorAll('header img')
+
 let knapp6 = btn11[1];
 knapp6.addEventListener('click', changeKnapp6color);
 
