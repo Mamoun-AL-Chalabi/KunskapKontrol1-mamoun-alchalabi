@@ -1,6 +1,9 @@
-// 1
 
-// Återställ knappen
+/* ............................... addevent listener  section ...............................*/
+
+
+
+/* ............................... reset button ...............................*/
 
 let btns = document.querySelectorAll('button');
 let reset = btns[2];
@@ -11,16 +14,17 @@ console.log(reset);
 
 let art1 = document.querySelector('.art-1');
 
-// Sätt en event listener på reset knappen
+
 reset.addEventListener('click', resetAll);
 
-// sätt event listener för första knappen
+
+/* ............................... name button ...............................*/
 
 let knapp1 = btns[0];
 knapp1.addEventListener('click',  changeBtninArt1);
 
 
-
+/* ............................... background button ...............................*/
 
 let knapp2 =btns[1];
 knapp2.addEventListener('click',changeArt1toRed);
@@ -30,12 +34,19 @@ let btn = document.querySelectorAll('header a')
 console.log(btn)
 
 
+/* ............................... photo button ...............................*/
+
 let knapp3 = btn[0];
 knapp3.addEventListener('click',changePhoto);
+
+
+/* ............................... remove button ...............................*/
 
 let knapp4 = btn[1];
 knapp4.addEventListener('click',RemoveArt2Btn)
 
+
+/* ............................... ul button ...............................*/
 
 let knapp5 = btn[2];
 knapp5.addEventListener('click', function handler (event) {
@@ -43,13 +54,20 @@ knapp5.addEventListener('click', function handler (event) {
     createUl();
   });
 
-
+/* ............................... colour button ...............................*/
 
 let btn11 = document.querySelectorAll('header img')
 
 let knapp6 = btn11[1];
 knapp6.addEventListener('click', changeKnapp6color);
 
+
+
+
+/* ............................... function section ...............................*/
+
+
+/* ............................... function for reset button  ...............................*/
 
 function resetAll() {
     art1.style.backgroundColor = 'white';
@@ -80,30 +98,38 @@ function resetAll() {
 
 }
 
+
+
+
+
+/* ............................... change name button ...............................*/
+
 function changeBtninArt1() {
     let art1Btn = document.querySelector('.art-1 button');
     art1Btn.innerText = 'bought';
     
 }
 
+/* ............................... change button color ...............................*/
 
 function changeKnapp6color (){
     let artBtn = document.querySelector ('.art-1 button')
     artBtn.style.backgroundColor='orange';
 }
 
-// ändrar art-1 backgrundsfärg till hot pink
+/* ............................... change background color ...............................*/
 function changeArt1toRed() {
     art1.style.backgroundColor = '#b20000';
 }
 
+/* ............................... remove button ...............................*/
 
 function RemoveArt2Btn () {
     let art2Btn = document.querySelector('.art-2 button');
     art2Btn.style.display='none';
 }
 
-
+ /* ............................... change photo ...............................*/
 
 function changePhoto () {
     let image = document.querySelector('.art-1 img');
@@ -112,7 +138,7 @@ function changePhoto () {
 
 
 
-
+ /* ...............................creat ul ...............................*/
  
 function createUl (){
 
