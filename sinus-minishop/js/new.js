@@ -38,7 +38,11 @@ knapp4.addEventListener('click',RemoveArt2Btn)
 
 
 let knapp5 = btn[2];
-knapp5.addEventListener('click',createUl)
+knapp5.addEventListener('click', function handler (event) {
+    this.removeEventListener("click", handler);
+    createUl();
+  });
+
 
 
 let btn11 = document.querySelectorAll('header img')
@@ -69,6 +73,10 @@ function resetAll() {
 
     document.querySelector('ul').remove();
     
+    knapp5.addEventListener('click', function handler (event) {
+        this.removeEventListener("click", handler);
+        createUl();
+      });
 
 }
 
